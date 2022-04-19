@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+ <head>
+    <title>Chisalita Andrei</title>
+     <body>
+       <h1>Problema 1</h1>
+       <p id="Text"></p>
+       <p id="Rezolvare1"></p>
+       <script>
+          function Problema1(){
+             const vocale= "aeiouAEIOU";
+             var text = window.prompt("Introduceti textul: ");
+             document.getElementById("Text").innerHTML ="" +text;
+             var NrVocale=0;
+             for (var i = 0; i <= text.length - 1; i++) {
+                if (text.charAt(i) == "a" || text.charAt(i) == "e" || text.charAt(i) == "i" || text.charAt(i) == "o" || text.charAt(i) == "u" || text.charAt(i) == "A" || text.charAt(i) == "E" || text.charAt(i) == "I" || text.charAt(i) == "O" || text.charAt(i) == "U") {
+                  NrVocale += 1;
+               }
+             }
+             
+             document.getElementById("Rezolvare1").innerHTML ="Acest text are " + NrVocale + " vocale.";
+          }
+       </script>
+       <button type="button" onclick="Problema1()">Problema1</button>
+       <h1>Problema 2</h1>
+       <p id="Rezolvare2">x $ y = z</p>
+       <script>
+         function Problema2(){
+           var x = parseFloat(prompt('x= '));
+           var y = parseFloat(prompt('y= '));
+           var z = parseFloat(prompt('z= ')); 
+           if(x + y == z){
+              document.getElementById("Rezolvare2").innerHTML = + x +"+"+ y +"=" + z;
+           }     
+            else if(x - y == z){
+              document.getElementById("Rezolvare2").innerHTML = + x +"-"+ y +"=" + z;
+           }
+           else if(x * y == z){
+              document.getElementById("Rezolvare2").innerHTML = + x +"*"+ y +"=" + z;
+           }
+           else if(x / y == z){
+              document.getElementById("Rezolvare2").innerHTML = + x +"/"+ y +"=" + z;
+           }
+           else{
+            document.getElementById("Rezolvare2").innerHTML ="Nu exista o operatie adevarata pentru aceste numere.";
+           }  
+        }  
+         </script>
+         <button type="button" onclick="Problema2()">Problema2</button>
+      </body>
+ </head>
